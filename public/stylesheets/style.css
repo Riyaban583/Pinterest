@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    color: #262626;
+}
+
+a {
+    text-decoration: none;
+    color: #00376b;
+}
+
+/* Login/Register Page Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+}
+
+.img1 {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header {
+    font-size: 17px;
+    font-weight: 600;
+    color: #8e8e8e;
+    margin-bottom: 20px;
+}
+
+.detail {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.btn.int {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e60023; /* Pinterest Red */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+/* Alert Messages */
+.alert-error { padding: 10px; background-color: #fdd; border: 1px solid #fbb; color: #D8000C; border-radius: 5px; margin-bottom: 15px; }
+.alert-success { padding: 10px; background-color: #dff0d8; border: 1px solid #d6e9c6; color: #3c763d; border-radius: 5px; margin-bottom: 15px; }
+
+/* Profile Page Styles */
+.profile-header { display: flex; align-items: center; padding: 30px; background: white; border-bottom: 1px solid #ddd; }
+.profile-pic img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #e60023; }
+.profile-info { margin-left: 20px; }
+.profile-info h1 { margin: 0; font-size: 28px; }
+.profile-info p { margin: 5px 0; color: #555; }
+.feed-btn { display: inline-block; padding: 10px 20px; margin-top: 15px; background: #e60023; color: white; font-weight: bold; border-radius: 20px; text-decoration: none; transition: background 0.3s ease; margin-right: 10px; }
+.feed-btn:hover { background: #b3001b; }
+
+/* Post Creation Form Styles */
+.post-creation { padding: 20px; background: #f0f0f0; text-align: center; border-bottom: 1px solid #ddd; }
+.post-creation textarea { width: 80%; max-width: 500px; height: 60px; padding: 10px; border-radius: 10px; border: 1px solid #ccc; font-family: inherit; }
+.post-creation button { background: #1178F2; color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; margin-top: 10px; cursor: pointer; }
+
+/* Profile Gallery Styles */
+.gallery { padding: 20px; }
+.gallery h2 { text-align: center; margin-bottom: 20px; }
+.card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+.card { width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
+.card img { width: 100%; display: block; height: auto; }
+.card-caption { padding: 15px; }
+.card-caption p { margin: 0; }
+
+
+.btn {
+    display: flex;
+    align-items: center;        /* Vertically center icon & text */
+    justify-content: center;    /* Center content horizontally */
+    gap: 10px;                  /* Space between icon & text */
+    width: 250px;               /* Button width */
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fbk {
+  background-color: #1877f2;
+  margin-left: auto;      /* Add this */
+  margin-right: auto;     /* Add this */
+  margin-bottom: 10px;    /* Add this for spacing */
+}
+
+/* Google button */
+.ggl {
+  background-color: #db4437;
+  margin-left: auto;      /* Add this */
+  margin-right: auto;     /* Add this */
+}
+
+/* Remove underline from anchor inside button */
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}

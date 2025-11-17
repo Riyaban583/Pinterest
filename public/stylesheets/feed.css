@@ -1,0 +1,64 @@
+/* style8.css */
+
+/* Reset & font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+    padding: 20px;
+}
+
+/* Title */
+.feed-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid layout like Pinterest */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card-pin {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card-pin:hover {
+    transform: translateY(-5px);
+}
+
+/* Image holder */
+.pin-image-holder {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pin-image-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+/* Title inside card */
+.pin-title {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}

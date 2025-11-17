@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.username %>'s Profile</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="profile-page-container">
+
+    <div class="profile-top-section">
+
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <div class="profile-top-bar">
+                    <h2 class="username"><%= user.username %></h2>
+                    <a href="/logout" class="logout-btn">Logout</a>
+                </div>
+                <div class="profile-stats">
+                    <span><strong><%= user.posts.length %></strong> posts</span>
+                    <span><strong>0</strong> followers</span>
+                    <span><strong>0</strong> following</span>
+                </div>
+                <div class="profile-bio">
+                    <p class="fullname"><strong><%= user.fullname %></strong></p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ea nisi magnam voluptas molestias, itaque nam excepturi incidunt quo assumenda nulla animi veniam reiciendis voluptatem asperiores repellendus temporibus voluptates mollitia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="create-post-container">
+            <h3>Create a New Post</h3>
+            <form action="/createpost" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Upload Image</label>
+                    <input type="file" name="postimage" required>
+                </div>
+                <div class="form-group">
+                    <label>Caption</label>
+                    <textarea name="caption" placeholder="Write a caption..."></textarea>
+                </div>
+                <button class="create-post-btn">Create Post</button>
+            </form>
+        </div>
+
+    </div> <div class="posts-section">
+        <div class="posts-section-header">
+            <h3>Your Posts</h3>
+        </div>
+        <div class="posts-feed">
+            <% if (user.posts && user.posts.length > 0) { %>
+                <% user.posts.reverse().forEach(function(post) { %>
+                    <div class="post-card">
+                        <div class="post-image-container">
+                             <img src="/images/uploads/<%= post.imageUrl %>" alt="Post Image">
+                             <div class="post-overlay">
+                                 <div class="post-overlay-content">
+                                     <span><i class="fa-solid fa-heart"></i> <%= post.likes.length %></span>
+                                     <span><i class="fa-solid fa-comment"></i> 0</span>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p class="no-posts">You haven't created any posts yet.</p>
+            <% } %>
+        </div>
+    </div>
+
+</div> </body>
+</html>
